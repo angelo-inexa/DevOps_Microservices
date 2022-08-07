@@ -1,0 +1,27 @@
+Sending build context to Docker daemon    122MB
+
+Step 1/6 : FROM python:3.7.3-stretch
+ ---> 34a518642c76
+Step 2/6 : WORKDIR /app
+ ---> Using cache
+ ---> ec68e55ba8db
+Step 3/6 : COPY . app.py /app/
+ ---> Using cache
+ ---> 8e4528629277
+Step 4/6 : RUN pip install --no-cache-dir --upgrade pip &&     pip install --no-cache-dir -r requirements.txt
+ ---> Using cache
+ ---> f9c5c1708ccd
+Step 5/6 : EXPOSE 80
+ ---> Using cache
+ ---> 03fce871c74f
+Step 6/6 : CMD ["python" , "app.py"]
+ ---> Using cache
+ ---> b11d2f1d6a30
+Successfully built b11d2f1d6a30
+Successfully tagged microserviceproject:latest
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+ * Serving Flask app "app" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: on
